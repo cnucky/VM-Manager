@@ -12,7 +12,7 @@ const upgradeRouter = {
       name: 'Upgrade',
       meta: {
         title: '升级',
-        // icon: ''
+        icon: 'upgrade'
       }
     }
   ]

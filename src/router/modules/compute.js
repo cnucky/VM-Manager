@@ -12,7 +12,7 @@ const computeRouter = {
       name: 'Compute',
       meta: {
         title: '计算',
-        // icon: ''
+        icon: 'compute'
       }
     }
   ]

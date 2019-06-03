@@ -12,7 +12,7 @@ const alarmRouter = {
       name: 'Alarm',
       meta: {
         title: '告警管理',
-        // icon: ''
+        icon: 'alarm'
       }
     }
   ]

@@ -12,7 +12,7 @@ const applicationRouter = {
       name: 'Application',
       meta: {
         title: '应用服务',
-        // icon: ''
+        icon: 'app-server'
       }
     }
   ]

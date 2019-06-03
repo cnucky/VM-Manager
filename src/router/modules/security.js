@@ -12,7 +12,7 @@ const securityRouter = {
       name: 'Security',
       meta: {
         title: '认证与安全',
-        // icon: ''
+        icon: 'security'
       }
     }
   ]

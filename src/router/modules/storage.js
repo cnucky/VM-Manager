@@ -12,7 +12,7 @@ const storageRouter = {
       name: 'Storage',
       meta: {
         title: '存储与镜像',
-        // icon: ''
+        icon: 'storage'
       }
     }
   ]
