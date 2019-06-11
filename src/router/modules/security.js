@@ -4,15 +4,33 @@ import Layout from '@/layout'
 const securityRouter = {
   path: '/security',
   component: Layout,
-  redirect: '/security/index',
+  meta: {
+    title: '认证与安全',
+    icon: 'security'
+  },
   children: [
     {
-      path: 'index',
-      component: () => import('@/views/security/index'),
-      name: 'Security',
+      path: 'adminAccountManager',
+      component: () => import('@/views/security/admin-account-manager'),
+      name: 'adminAccountManager',
       meta: {
-        title: '认证与安全',
-        icon: 'security'
+        title: '管理员'
+      }
+    },
+    {
+      path: 'characterManager',
+      component: () => import('@/views/security/character-manager'),
+      name: 'characterManager',
+      meta: {
+        title: '角色管理'
+      }
+    },
+    {
+      path: 'ADManager',
+      component: () => import('@/views/security/AD-manager'),
+      name: 'ADManager',
+      meta: {
+        title: 'AD管理'
       }
     }
   ]

@@ -4,15 +4,33 @@ import Layout from '@/layout'
 const applicationRouter = {
   path: '/application',
   component: Layout,
-  redirect: '/application/index',
+  meta: {
+    title: '应用服务',
+    icon: 'app-server'
+  },
   children: [
     {
-      path: 'index',
-      component: () => import('@/views/application/index'),
-      name: 'Application',
+      path: 'appGroupManager',
+      component: () => import('@/views/application/app-group-manager'),
+      name: 'appGroupManager',
       meta: {
-        title: '应用服务',
-        icon: 'app-server'
+        title: '应用组'
+      }
+    },
+    {
+      path: 'appServerManager',
+      component: () => import('@/views/application/app-server-manager'),
+      name: 'appServerManager',
+      meta: {
+        title: '应用服务器'
+      }
+    },
+    {
+      path: 'appStrategyManager',
+      component: () => import('@/views/application/app-strategy-manager'),
+      name: 'appStrategyManager',
+      meta: {
+        title: '策略'
       }
     }
   ]

@@ -4,15 +4,25 @@ import Layout from '@/layout'
 const storageRouter = {
   path: '/storage',
   component: Layout,
-  redirect: '/storage/index',
+  meta: {
+    title: '存储与镜像',
+    icon: 'storage'
+  },
   children: [
     {
-      path: 'index',
-      component: () => import('@/views/storage/index'),
-      name: 'Storage',
+      path: 'storageManager',
+      component: () => import('@/views/storage/storage-manager'),
+      name: 'storageManager',
       meta: {
-        title: '存储与镜像',
-        icon: 'storage'
+        title: '存储配置'
+      }
+    },
+    {
+      path: 'imageManager',
+      component: () => import('@/views/storage/image-manager'),
+      name: 'imageManager',
+      meta: {
+        title: '镜像管理'
       }
     }
   ]

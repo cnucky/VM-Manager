@@ -3,6 +3,7 @@ import Layout from '@/layout'
 const desktopRouter = {
   path: '/desktop',
   component: Layout,
+  redirect: '/desktop/rapidDeployCenter',
   meta: {
     title: '桌面服务',
     icon: 'desktop'
@@ -11,7 +12,7 @@ const desktopRouter = {
     {
       path: 'rapidDeployCenter',
       component: () => import('@/views/desktop/quick-grant'),
-      name: "rapidDeployCenter",
+      name: 'rapidDeployCenter',
       meta: {
         title: '快速发放'
       }
@@ -19,7 +20,7 @@ const desktopRouter = {
     {
       path: 'desktopGroupManager',
       component: () => import('@/views/desktop/desktop-group'),
-      name: "desktopGroupManager",
+      name: 'desktopGroupManager',
       meta: {
         title: '桌面组'
       }
@@ -27,6 +28,7 @@ const desktopRouter = {
     {
       path: 'strategy',
       component: () => import('@/views/desktop/strategy/index'),
+      redirect: '/desktop/strategy/timingStrategyManager',
       meta: {
         title: '策略'
       },
@@ -42,7 +44,7 @@ const desktopRouter = {
         {
           path: 'desktopStrategyManager',
           component: () => import('@/views/desktop/strategy/desktop-strategy'),
-          name: "desktopStrategyManager",
+          name: 'desktopStrategyManager',
           meta: {
             title: '广域网策略'
           }

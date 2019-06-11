@@ -259,6 +259,11 @@ $light_gray:#eee;
   min-height: 100%;
   width: 100%;
   background-color: $bg;
+/*  登录背景*/
+  background-image: url(../../assets/images/login-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
   overflow: hidden;
 
   .login-form {

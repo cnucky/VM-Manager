@@ -7,30 +7,44 @@
     <div class="right-menu">
       <template v-if="device!=='mobile'">
         <!--<search id="header-search" class="right-menu-item" />-->
-
-        <error-log class="errLog-container right-menu-item hover-effect" />
-
+        <!--<error-log class="errLog-container right-menu-item hover-effect" />-->
         <screenfull id="screenfull" class="right-menu-item hover-effect" />
+        <!--<lang-select class="right-menu-item hover-effect" />-->
 
-        <lang-select class="right-menu-item hover-effect" />
-
-      </template>
-
-      <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
-        <div class="avatar-wrapper">
-          <svg-icon icon-class="user" class="user-avatar"/>
+        <div class=" right-menu-item hover-effect">
+          <el-tooltip class="item" effect="dark" content="导出运行日志" placement="bottom">
+            <svg-icon icon-class="link" />
+          </el-tooltip>
         </div>
-        <el-dropdown-menu slot="dropdown">
-          <router-link to="/">
-            <el-dropdown-item>
-              {{ $t('navbar.dashboard') }}
+
+        <div class=" right-menu-item hover-effect">
+          <el-tooltip class="item" effect="dark" content="告警信息" placement="bottom">
+            <svg-icon icon-class="message" />
+          </el-tooltip>
+        </div>
+
+        <div class=" right-menu-item hover-effect">
+          <el-tooltip class="item" effect="dark" content="任务消息" placement="bottom">
+            <svg-icon icon-class="email" />
+          </el-tooltip>
+        </div>
+
+        <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
+          <div class="avatar-wrapper">
+            <svg-icon icon-class="user" />
+          </div>
+          <el-dropdown-menu slot="dropdown">
+            <router-link to="/">
+              <el-dropdown-item>
+                首页
+              </el-dropdown-item>
+            </router-link>
+            <el-dropdown-item divided>
+              <span style="display:block;" @click="logout">注销</span>
             </el-dropdown-item>
-          </router-link>
-          <el-dropdown-item divided>
-            <span style="display:block;" @click="logout">{{ $t('navbar.logOut') }}</span>
-          </el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
+          </el-dropdown-menu>
+        </el-dropdown>
+      </template>
     </div>
   </div>
 </template>
@@ -39,21 +53,21 @@
 import { mapGetters } from 'vuex'
 import Breadcrumb from '@/components/Breadcrumb'
 import Hamburger from '@/components/Hamburger'
-import ErrorLog from '@/components/ErrorLog'
+// import ErrorLogLog from '@/components/ErrorLog'
 import Screenfull from '@/components/Screenfull'
-import SizeSelect from '@/components/SizeSelect'
-import LangSelect from '@/components/LangSelect'
-import Search from '@/components/HeaderSearch'
+// import SizeSelectelect from '@/components/SizeSelect'
+// import LangSelectSelect from '@/components/LangSelect'
+// import Searchch from '@/components/HeaderSearch'
 
 export default {
   components: {
     Breadcrumb,
     Hamburger,
-    ErrorLog,
-    Screenfull,
-    SizeSelect,
-    LangSelect,
-    Search
+    // ErrorLog,
+    Screenfull
+    // SizeSelect,
+    // LangSelect,
+    // Search
   },
   computed: {
     ...mapGetters([
