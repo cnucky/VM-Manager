@@ -1,5 +1,5 @@
 module.exports = {
-  title: '中国联通',
+  title: '中国移动',
 
   /**
    * @type {boolean} true | false

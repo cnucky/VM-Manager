@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      title: '中国联通东南研究院',
+      title: '中国移动',
       logo: 'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png'
     }
   }
